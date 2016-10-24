@@ -12,7 +12,8 @@ int main(int argc, char* argv[])
   printf(procID);
 
 
-  /* HANDLE process = OpenProcess(PROCESS_ALL_ACCESS ,FALSE ,procID) ;
+  HANDLE process = OpenProcess(PROCESS_ALL_ACCESS ,FALSE ,procID) ;
+ 
   if(process == NULL){
     printf("Error: the specified process couldn't be found.\n") ;
   }
@@ -43,6 +44,6 @@ int main(int argc, char* argv[])
 
   CloseHandle(process);
 
-  getchar();*/
+  getchar();
   return 0;
 }
