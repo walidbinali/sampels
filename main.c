@@ -1,3 +1,5 @@
+// C version of the injector ...
+
 #include <stdio.h>
 #include <windows.h>
 
@@ -9,9 +11,7 @@ int main(int argc, char* argv[])
 
   printf("Enter process ID of the targeted process: ");
   scanf(&procID) ;
-  printf(procID);
-
-
+  
   HANDLE process = OpenProcess(PROCESS_ALL_ACCESS ,FALSE ,procID) ;
  
   if(process == NULL){
